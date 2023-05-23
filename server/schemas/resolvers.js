@@ -37,8 +37,28 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
+
+      
     },
 
+    addBook: async (parent, { authors, description, bookId, image, link, title }, context) => {
+      console.log("---------------in addBook resolver----------------")
+      if (context.user) {
+        return User.findOneAndUpdate(
+          { _id: context.user._id },
+          {
+            $addToSet: {
+              savedBooks: { authors: authors, description: description, bookId: bookId, image: image, link: link, title: title },
+            },
+          },
+          {
+            new: true,
+            runValidators: true,
+          }
+        );
+      }
+      throw new AuthenticationError('You need to be logged in!');
+    },
   }
 
 };
