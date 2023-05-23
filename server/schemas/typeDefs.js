@@ -6,7 +6,7 @@ const typeDefs = gql`
     username: String
     email: String
     password: String
-    books: [Book]!
+    savedBooks: [Book]!
   }
 
   type Book {
@@ -26,7 +26,7 @@ const typeDefs = gql`
   }
 
   type Query {
-    me: [User]!
+    me: User
   }
 
   type Mutation {
