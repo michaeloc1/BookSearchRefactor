@@ -95,7 +95,7 @@ const SearchBooks = () => {
       const { data } = await addBook({
         variables: { authors: bookToSave.authors,  description: bookToSave.description, bookId: bookToSave.bookId, image: bookToSave.image, link: "www.yahoo.com", title: bookToSave.title},
       });
-
+      setSavedBookIds([...savedBookIds, bookToSave.bookId]);
     } catch (e) {
       console.error(e);
     }
