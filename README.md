@@ -35,6 +35,6 @@ Visit me at [Github](https://github.com/michaeloc1)
 ## Screenshot
 ![](./booksearch-screenshot.png)
 ## Link to Github repository
-[Link](https://github.com/michaeloc1/SocialMediaBackEnd) to Github repository.
+[Link](https://github.com/michaeloc1/BookSearchRefactor) to Github repository.
 ## Link to Deployed Website
 [Link](https://enigmatic-plains-14872.herokuapp.com/) to deployed website.
